@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nightbus · 使用說明</title>
+<title>Nightbus · 使用說明 · User Guide</title>
 <style>
   :root { color-scheme: dark; }
   body { margin: 0; background: #04060d; color: #e8f0ff; font: 16px/1.8 -apple-system, "PingFang TC", "Noto Sans TC", sans-serif; }
@@ -24,11 +24,24 @@
   kbd { background: #101830; border: 1px solid #26314e; border-radius: 6px; padding: 1px 7px; font-size: 13px; color: #9fdcff; }
   .toc { background: #0a0e1c; border: 1px solid #1b2440; border-radius: 14px; padding: 14px 20px; }
   .toc a { text-decoration: none; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+  .tabs button { background: #0a0e1c; color: #7a8699; border: 1px solid #26314e; border-radius: 10px; padding: 6px 14px; font-size: 13px; cursor: pointer; }
+  .tabs button.on { color: #2ce6ff; border-color: #2ce6ff88; }
+  .lang { display: none; }
+  .lang.on { display: block; }
+  .foot { margin-top: 36px; color: #7a8699; font-size: 13px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="brand">NIGHTBUS</div>
+  <div class="tabs">
+    <button data-l="zh-Hant" class="on">繁體中文</button>
+    <button data-l="en">English</button>
+  </div>
+
+  <!-- ================= 繁體中文 ================= -->
+  <section class="lang zh-Hant on">
   <h1>使用說明</h1>
   <div class="sub">夜航 · 把日常變成一場深夜巡航 — 2026 年 9 月版</div>
 
@@ -138,10 +151,137 @@
     <p>免註冊、匿名帳號；只在配對後同步你選擇分享的內容；無廣告、無追蹤、不出售資料。詳見<a href="./">隱私政策</a>。</p>
   </div>
 
-  <p style="margin-top:36px;color:#7a8699;font-size:13px">
+  <p class="foot">
     問題或建議：<a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a><br>
     ⚠️ Nightbus 是日常提醒與陪伴工具，並非醫療工具，不提供任何用藥劑量或醫療建議。
   </p>
+  </section>
+
+  <!-- ================= English ================= -->
+  <section class="lang en">
+  <h1>User Guide</h1>
+  <div class="sub">Night Bus · turn the everyday into a neon night cruise — September 2026</div>
+
+  <div class="toc">
+    <strong>Contents</strong><br>
+    <a href="#start-en">1. Quick start</a> ·
+    <a href="#pilot-en">2. Pilot guide</a> ·
+    <a href="#tower-en">3. Tower guide</a> ·
+    <a href="#pair-en">4. Pairing</a> ·
+    <a href="#roles-en">5. Roles &amp; buddy mode</a> ·
+    <a href="#faq-en">6. FAQ</a>
+  </div>
+
+  <h2 id="start-en">1. Quick start</h2>
+  <p>Nightbus has two roles, normally on <strong>two phones</strong>:</p>
+  <div class="card"><ul>
+    <li><strong>Pilot</strong> — the one tracking their own daily runs (reminders). Ignite on time, earn mileage, spend it on rewards.</li>
+    <li><strong>Tower</strong> — the family member or buddy watching over the pilot. Sees only what the pilot chooses to share; can post bounties, approve redeems, and send silent encouragement.</li>
+  </ul></div>
+  <ol>
+    <li>Install Nightbus from TestFlight and open it — <strong>no sign-up</strong>, you're in.</li>
+    <li>On "Which side are you on?", pick your role (once; you can switch later in Settings).</li>
+    <li>Pilot: enter a callsign (e.g. Casper) and go. Tower: enter the 6-digit code your pilot gives you.</li>
+    <li>Pilots: <strong>enable notifications</strong> when asked — arrival reminders depend on it.</li>
+  </ol>
+  <div class="tip">Curious what the Tower side looks like? The tower's code-entry screen has a <strong>Demo mode</strong> — a full sample dashboard on one device, no pairing needed.</div>
+
+  <h2 id="pilot-en">2. Pilot guide</h2>
+
+  <h3>Route (home) — ignition</h3>
+  <p>When a run arrives, open the app and hit <strong>IGNITE</strong>. Rewards depend on timing:</p>
+  <table>
+    <tr><th>When</th><th>Status</th><th>Mileage</th></tr>
+    <tr><td>Within 15 min of arrival</td><td>On time</td><td>+50 mi</td></tr>
+    <tr><td>After 15 min, before breakdown</td><td>Late ignition</td><td>+20 mi</td></tr>
+    <tr><td>After breakdown</td><td>Logged late</td><td>+10 mi</td></tr>
+  </table>
+  <p>Not feeling it? Tap <strong>"In traffic"</strong> to delay 15 minutes, up to twice per run — the tower is not notified while you're in traffic. If a run goes 1 hour past arrival (delays extend this) without ignition, it <strong>breaks down</strong> — with Full broadcast on, the tower gets one breakdown alert.</p>
+
+  <h3>Fuel bay (Settings) — manage runs</h3>
+  <ul>
+    <li>Add a run: name it whatever you like (e.g. "Focus Fuel"), pick an icon and colour, add one or more times (12-hour).</li>
+    <li><strong>Every day</strong>: departs at the same time daily until you delete it. <strong>Today only</strong>: runs once and retires itself tomorrow — for one-off things.</li>
+    <li>New accounts come with two sample runs (Focus Fuel, Goodnight Supply) — rename, retime, or delete them freely.</li>
+  </ul>
+
+  <h3>Express coach — focus timer</h3>
+  <p>Depart a non-stop express of 15 / 25 / 50 minutes: full-screen cruising animation with optional rain sounds. Reach the terminus for +4 mi per minute; return early and no mileage is counted.</p>
+
+  <h3>Side quests — split your to-dos</h3>
+  <p>Break tasks into small (+10), mid (+20) and big (+40) stops — every stop earns mileage. Anything over 25 minutes: split it, or run an Express through it.</p>
+
+  <h3>Depot — spend your mileage</h3>
+  <ul>
+    <li><strong>Night market</strong>: list real-world privileges you want (e.g. "stay up an hour later") and set your own price. Redeeming deducts mileage and sends the request to the tower — it takes effect on approval; declines are refunded.</li>
+    <li><strong>Bounty board</strong>: challenges posted by the tower. Claim when you hit the goal; if the reward isn't tempting enough, <strong>counter-offer</strong> — negotiating is your right.</li>
+    <li><strong>Garage</strong>: unlock bus liveries — Violet Storm (3-day streak), Cyber Pink (7-day streak), Pixel Glow (5 express trips), Silver UFO (5,000 mi total).</li>
+  </ul>
+
+  <h3>Signal broadcast — you decide how much to share</h3>
+  <table>
+    <tr><th>Mode</th><th>What the tower sees</th></tr>
+    <tr><td>Full broadcast</td><td>Each run's time and ignition record, breakdown alerts</td></tr>
+    <tr><td>All-clear only</td><td>Just "x/y today ✓" — no details</td></tr>
+    <tr><td>Silent</td><td>Nothing at all (alerts included)</td></tr>
+  </table>
+
+  <h3>Keep your records (optional)</h3>
+  <p>Link an Apple ID in Settings. Once linked, pairing, routes and mileage follow you to a new phone. Everything works without linking too.</p>
+
+  <h2 id="tower-en">3. Tower guide</h2>
+  <ul>
+    <li><strong>Watch dashboard</strong>: their runs done today, day streak and total mileage; with Full broadcast, a complete timeline. A breakdown raises a red alert — tap "Got it" to dismiss.</li>
+    <li><strong>Silent signals</strong>: three minimal signals — "+1 COOL", "RESPECT", "COPY THAT". One +1 is enough: they know you're there, without the nagging.</li>
+    <li><strong>Bounties</strong>: tap "Post" to set a reward + goal. Pick a quantified goal (streak / express trips / on-time ignitions — progress tracks automatically) or a <strong>custom task</strong> (free text like "do the dishes on Sunday"; they claim it themselves when done — deliver when you see "Completed"). When they counter-offer, accept the new reward or keep the original.</li>
+    <li><strong>Depot approvals</strong>: privileges they list show up immediately (Listed); a redeem turns it into a pending approval — approve and it takes effect, decline and the mileage refunds. A deal is a deal.</li>
+  </ul>
+  <div class="tip">The tower's spirit is <strong>quiet watching</strong>: what you can do is deliberately limited — you can't edit their runs or leave lectures. Giving space is also trust.</div>
+
+  <h2 id="pair-en">4. Pairing</h2>
+  <ol>
+    <li>Pilot: <kbd>Settings</kbd> → <kbd>Tower link</kbd> → <kbd>Generate code</kbd>, and give the 6 digits to your tower.</li>
+    <li>Tower: enter a nickname (e.g. Mum) and the code, tap Connect.</li>
+    <li>Codes are single-use and valid for 24 hours; regenerating invalidates the old one immediately.</li>
+    <li>Either side can unpair anytime. If the tower leaves, the pilot can generate a new code; if the pilot leaves, the pairing ends.</li>
+  </ol>
+
+  <h2 id="roles-en">5. Roles &amp; buddy mode</h2>
+  <p>The tower isn't parents-only — classmates and friends who keep each other honest can be each other's guardians.</p>
+  <ul>
+    <li>Pilot: <kbd>Settings</kbd> → <kbd>Role</kbd> → Switch to tower. Your runs and records stay on the device; switch back anytime.</li>
+    <li>Tower: the "Switch role" link at the bottom of the code-entry or watch screen.</li>
+    <li>Note: <strong>one account cannot be both sides of the same pair</strong> — mutual watching needs each person's own device and each other's codes.</li>
+  </ul>
+
+  <h2 id="faq-en">6. FAQ</h2>
+  <div class="card">
+    <h3>Not getting reminders?</h3>
+    <p>Check iOS Settings → Notifications → Nightbus. Reminders are scheduled about a week ahead; if the app isn't opened for a while you'll get a "Reminders are asleep" notice — open the app once to top them up.</p>
+    <h3>What happens on a new phone or after reinstalling?</h3>
+    <p>Reinstalling on the same device usually restores your account automatically. For cross-device safety, link an Apple ID in Settings.</p>
+    <h3>Want a fresh start?</h3>
+    <p><kbd>Settings</kbd> → <kbd>Erase all data</kbd>: removes everything on the device and signs out; the next launch starts from role selection.</p>
+    <h3>How long until the other side sees my action?</h3>
+    <p>Sync between paired devices normally takes 5–20 seconds, depending on the network.</p>
+    <h3>Is my data safe?</h3>
+    <p>No sign-up, anonymous accounts; only what you choose to share syncs, and only after pairing; no ads, no tracking, no data sale. See the <a href="./">privacy policy</a>.</p>
+  </div>
+
+  <p class="foot">
+    Questions or feedback: <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a><br>
+    ⚠️ Nightbus is a daily-reminder and companion tool, not a medical tool; it provides no dosage or medical advice.
+  </p>
+  </section>
 </div>
+<script>
+  const pick = (l) => {
+    document.querySelectorAll('.lang').forEach((s) => s.classList.toggle('on', s.classList.contains(l)))
+    document.querySelectorAll('.tabs button').forEach((b) => b.classList.toggle('on', b.dataset.l === l))
+    document.documentElement.lang = l
+  }
+  if ((navigator.language || '').toLowerCase().startsWith('en')) pick('en')
+  document.querySelectorAll('.tabs button').forEach((b) => b.addEventListener('click', () => pick(b.dataset.l)))
+</script>
 </body>
 </html>
