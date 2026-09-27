@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Nightbus · 使用說明（1.1 草稿） · User Guide (1.1 draft)</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #04060d; color: #e8f0ff; font: 16px/1.8 -apple-system, "PingFang TC", "Noto Sans TC", sans-serif; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+  h1 { font-size: 26px; letter-spacing: .04em; margin: 8px 0 2px; }
+  .sub { color: #7a8699; font-size: 13px; margin-bottom: 28px; }
+  h2 { font-size: 19px; margin: 40px 0 10px; color: #2ce6ff; }
+  h3 { font-size: 15px; margin: 22px 0 6px; color: #9fb4d8; }
+  p, li { color: #b9c6dd; font-size: 15px; }
+  ul, ol { padding-left: 22px; }
+  .brand { color: #2ce6ff; font-weight: 700; letter-spacing: .18em; font-size: 13px; }
+  .draft { display: inline-block; margin-left: 10px; color: #7a8699; border: 1px solid #3a4763; border-radius: 6px; padding: 0 8px; font-size: 12px; letter-spacing: .08em; }
+  a { color: #9fb4d8; }
+  .card { background: #0a0e1c; border: 1px solid #1b2440; border-radius: 14px; padding: 6px 18px; margin: 12px 0; }
+  .tip { border-left: 3px solid #3a4763; background: #0a0e1c; padding: 8px 14px; border-radius: 0 10px 10px 0; margin: 12px 0; font-size: 14px; color: #b9c6dd; }
+  table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: 14px; }
+  th, td { border: 1px solid #1b2440; padding: 7px 10px; text-align: left; color: #b9c6dd; }
+  th { color: #9fb4d8; background: #0a0e1c; }
+  kbd { background: #101830; border: 1px solid #26314e; border-radius: 6px; padding: 1px 7px; font-size: 13px; color: #e8f0ff; }
+  .toc { background: #0a0e1c; border: 1px solid #1b2440; border-radius: 14px; padding: 14px 20px; }
+  .toc a { text-decoration: none; }
+  .tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+  .tabs button { background: #0a0e1c; color: #7a8699; border: 1px solid #26314e; border-radius: 10px; padding: 6px 14px; font-size: 13px; cursor: pointer; }
+  .tabs button.on { color: #e8f0ff; border-color: #e8f0ff; }
+  .lang { display: none; }
+  .lang.on { display: block; }
+  .foot { margin-top: 36px; color: #7a8699; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">NIGHTBUS <span class="draft">1.1 DRAFT</span></div>
+  <div class="tabs">
+    <button data-l="zh-Hant" class="on">繁體中文</button>
+    <button data-l="en">English</button>
+    <button data-l="zh-Hans">简体中文</button>
+  </div>
+
+  <!-- ================= 繁體中文 ================= -->
+  <section class="lang zh-Hant on">
+  <h1>使用說明</h1>
+  <div class="sub">夜航 · 到點提醒，有人在旁 — 1.1 版草稿（2026 年 9 月）</div>
+
+  <div class="toc">
+    <strong>目錄</strong><br>
+    <a href="#start">1. 快速開始</a> ·
+    <a href="#pilot">2. 駕駛員</a> ·
+    <a href="#copilot">3. 副駕</a> ·
+    <a href="#share">4. 配對與分享層級</a> ·
+    <a href="#roles">5. 一個帳號、兩邊都能當</a> ·
+    <a href="#faq">6. 常見問題</a>
+  </div>
+
+  <h2 id="start">1. 快速開始</h2>
+  <p>Nightbus 是給任何有 ADHD 特質的人——青少年或成人——的日常提醒。它有兩邊，通常在<strong>兩台手機</strong>上：</p>
+  <div class="card"><ul>
+    <li><strong>駕駛員</strong>——記錄自己日常事項的人。到點收到提醒，點一下完成。</li>
+    <li><strong>副駕</strong>——你選擇讓他看一張卡的人：家人、伴侶或夥伴。只看到你分享的部分，能送你三種正向訊號。</li>
+  </ul></div>
+  <ol>
+    <li>打開 App——<strong>免註冊</strong>，直接開始。</li>
+    <li>在「你在哪一邊？」選一邊。這只是「先看哪個畫面」，之後隨時可切。</li>
+    <li>駕駛員：輸入你的代號（例如 Casper）就出發。副駕：輸入駕駛員給你的 6 位配對碼。</li>
+    <li>駕駛員請在提示出現時<strong>開啟通知</strong>——到點提醒全靠它。</li>
+  </ol>
+  <div class="tip">還沒有人配對？副駕的配對碼頁有「示範模式」，單機就能看到那張卡長什麼樣。</div>
+
+  <h2 id="pilot">2. 駕駛員</h2>
+
+  <h3>主畫面：今天的時間線</h3>
+  <p>今天的事項按時間排成一列。到點那一格會<strong>亮起來</strong>，其他全部安靜；已完成的沉到底部變暗。頂部七格是接下來七天，只能往後看一週。</p>
+  <ul>
+    <li><strong>點一下</strong>那一列 = 點火（完成）。</li>
+    <li><strong>長按</strong> = 塞車中，延後 15 分鐘，最多兩次。</li>
+    <li>錯過的班次只是灰的，寫「下一班 下午 8:00」。不會變紅，也不會數你錯過幾次。</li>
+  </ul>
+
+  <h3>新增事項：三個欄位</h3>
+  <p>右下角「＋」。名稱 → <kbd>燃料</kbd> 或 <kbd>任務</kbd> → <kbd>每天</kbd>／<kbd>每週</kbd>／<kbd>只這一次</kbd>。就這樣。</p>
+  <ul>
+    <li><strong>燃料</strong> = 藥物、保健品。<strong>任務</strong> = 其他要做的事。兩者只差圖示，其他完全一樣。</li>
+    <li>「每天」預設一個時間（第一次是 08:00，之後記住你上次設的），「＋」再加一個時間。</li>
+    <li>「只這一次」可以不設時間：那是全天事項，整天都能完成，只在 09:00 提醒一次，永遠不會「塞車」。</li>
+  </ul>
+
+  <h3>提醒：到點就響，鎖屏上就能完成</h3>
+  <table>
+    <tr><th>時機</th><th>會發生什麼</th></tr>
+    <tr><td>到點</td><td>通知響（自訂鈴聲，約 25 秒）。內容只有事項名稱和時間。</td></tr>
+    <tr><td>+5 分、之後每 10 分</td><td>還沒點火就同一則再響，直到點火或寬限結束（到點後 60 分鐘，每次塞車加 15）。</td></tr>
+    <tr><td>長按通知</td><td>「點火」直接完成；「塞車中 · 延後 15 分鐘」。都不用解鎖或開 App。</td></tr>
+  </table>
+  <div class="tip">手機在<strong>靜音開關</strong>下不會響也不會震，只有橫幅——這是 iOS 的界線，不是 App 的設定。</div>
+
+  <h3>連續紀錄</h3>
+  <p>主畫面右上角是連續有完成的天數。只有這一個數字；沒有分數、沒有排名。</p>
+
+  <h2 id="copilot">3. 副駕</h2>
+  <p>副駕的手機上只有<strong>一張卡</strong>：</p>
+  <div class="card">
+    <p><strong>今天 3／4 ✓</strong><br>最後一次 下午 2:20</p>
+    <p>［ +1 酷 ］［ 尊敬 ］［ 收到 ］</p>
+  </div>
+  <ul>
+    <li>三個按鈕是全部的操作。它們是正向訊號，駕駛員會在自己的手機上收到一則輕輕的通知。沒有「催」的按鈕。</li>
+    <li>駕駛員設為「全部」時，點卡可以展開今天的清單：每列顯示時間、名稱、已完成的時間或「塞車中」／「未到站」。</li>
+    <li>連續兩次沒有點火，卡才會寫「塞車中 · 最後一次 …」。單次不驚動任何人。這一行也是灰的。</li>
+    <li>塞車中只在副駕打開 App 時看得到；目前不會推播通知。</li>
+  </ul>
+
+  <h2 id="share">4. 配對與分享層級</h2>
+  <ol>
+    <li>駕駛員：設定 → 副駕連線 → 產生 6 位配對碼。24 小時內有效、只能用一次。</li>
+    <li>副駕：在自己的手機輸入暱稱和那 6 位碼。連上後駕駛員會看到「〈暱稱〉已連線」。</li>
+  </ol>
+  <p>分享多少由<strong>駕駛員</strong>決定，設定裡三選一，隨時可換：</p>
+  <table>
+    <tr><th>層級</th><th>副駕看到</th></tr>
+    <tr><td>全部</td><td>那張卡，並可展開今天的清單。</td></tr>
+    <tr><td>只看總覽</td><td>只有那張卡（含塞車中），不能展開。</td></tr>
+    <tr><td>靜音</td><td>只有「靜音中」。沒有數字、沒有塞車中。</td></tr>
+  </table>
+  <p>這些層級由伺服器規則強制，不是靠 App 畫面藏起來。任一邊都可以隨時解除配對。</p>
+
+  <h2 id="roles">5. 一個帳號、兩邊都能當</h2>
+  <p>你可以一邊當自己的駕駛員，一邊當另一個人的副駕——伴侶、朋友、互相督促的夥伴。</p>
+  <ul>
+    <li>駕駛員畫面：設定 → 「守航」卡 → 「切到守航視圖」。</li>
+    <li>副駕畫面：底部「切到我的駕駛艙」。</li>
+    <li>切換只是換畫面；你的事項、配對和提醒都不受影響。</li>
+    <li>一個帳號不能和自己配對——副駕一定是另一台手機上的另一個人。</li>
+  </ul>
+
+  <h2 id="faq">6. 常見問題</h2>
+  <div class="card">
+    <h3>沒有收到提醒？</h3>
+    <p>設定 → 通知 → Nightbus 要開啟，且「時效性通知」為開。App 內設定頁有「通知診斷」卡，能看到目前排程中的通知數與下一則時間。</p>
+    <h3>手機關機或 App 被強制結束時，副駕會看到什麼？</h3>
+    <p>伺服器每 15 分鐘檢查一次；超過寬限沒有點火的班次會被標記，副駕清單上那一列會顯示「塞車中」。這不需要你的手機在線。</p>
+    <h3>重裝 App 會怎樣？</h3>
+    <p>同一台手機重裝通常會找回同一個匿名帳號。換手機前，可以在設定用 Apple 帳號「保留你的紀錄」，之後在新手機登入即可恢復事項、連續紀錄與配對。</p>
+    <h3>我的資料安全嗎？</h3>
+    <p>免註冊、匿名帳號；只在配對後同步你選擇分享的內容；無廣告、無追蹤、不出售資料、不收集健康資料。詳見<a href="./">隱私政策</a>。</p>
+  </div>
+
+  <p class="foot">
+    問題或建議：<a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a><br>
+    Nightbus 是日常提醒與陪伴工具，並非醫療工具，不提供任何劑量或醫療建議。
+  </p>
+  </section>
+
+  <!-- ================= English ================= -->
+  <section class="lang en">
+  <h1>User Guide</h1>
+  <div class="sub">Reminders that ring. Someone who sees. — version 1.1 draft (September 2026)</div>
+
+  <div class="toc">
+    <strong>Contents</strong><br>
+    <a href="#start">1. Quick start</a> ·
+    <a href="#pilot">2. Pilot</a> ·
+    <a href="#copilot">3. Co-pilot</a> ·
+    <a href="#share">4. Pairing and sharing tiers</a> ·
+    <a href="#roles">5. One account, both sides</a> ·
+    <a href="#faq">6. FAQ</a>
+  </div>
+
+  <h2>1. Quick start</h2>
+  <p>Nightbus is a daily reminder for anyone with ADHD traits — teen or adult. It has two sides, usually on <strong>two phones</strong>:</p>
+  <div class="card"><ul>
+    <li><strong>Pilot</strong> — the person keeping their own daily items. Gets reminded when it is time, taps once to finish.</li>
+    <li><strong>Co-pilot</strong> — someone you let see one card: family, a partner or a buddy. Sees only what you share and can send you three positive signals.</li>
+  </ul></div>
+  <ol>
+    <li>Open the app — <strong>no sign-up</strong>, just start.</li>
+    <li>On "Which side are you on?" pick one. It only decides which screen you see first; you can switch any time.</li>
+    <li>Pilot: enter your callsign (e.g. Casper) and go. Co-pilot: enter the 6-digit code the pilot gives you.</li>
+    <li>Pilots: <strong>enable notifications</strong> when asked — the reminders depend on it.</li>
+  </ol>
+  <div class="tip">Nobody to pair with yet? The co-pilot's code screen has a demo mode that shows the card on a single phone.</div>
+
+  <h2>2. Pilot</h2>
+
+  <h3>Main screen: today's timeline</h3>
+  <p>Today's items in one column, by time. The slot that is due <strong>lights up</strong>; everything else stays quiet; finished ones sink to the bottom, dimmed. The seven cells on top are the next seven days — you can only look a week ahead.</p>
+  <ul>
+    <li><strong>Tap</strong> a row = Ignite (done).</li>
+    <li><strong>Long-press</strong> = In traffic — delay 15 minutes, at most twice.</li>
+    <li>A missed slot is just grey and says "Next run 8:00 PM". It never turns red and nothing counts your misses.</li>
+  </ul>
+
+  <h3>Adding an item: three fields</h3>
+  <p>The "+" at the bottom right. Name → <kbd>Fuel</kbd> or <kbd>Task</kbd> → <kbd>Every day</kbd> / <kbd>Weekly</kbd> / <kbd>Just once</kbd>. That is all.</p>
+  <ul>
+    <li><strong>Fuel</strong> = medication, supplements. <strong>Task</strong> = anything else to do. They differ only in icon.</li>
+    <li>"Every day" starts with one time (8:00 AM the first time, then whatever you set last); "+" adds another.</li>
+    <li>"Just once" can have no time: an all-day item, doable any time that day, reminded once at 9:00 AM, never "in traffic".</li>
+  </ul>
+
+  <h3>Reminders: it rings, and you finish it on the lock screen</h3>
+  <table>
+    <tr><th>When</th><th>What happens</th></tr>
+    <tr><td>On time</td><td>The notification rings (custom sound, about 25 s). It says only the item's name and time.</td></tr>
+    <tr><td>+5 min, then every 10</td><td>The same notification rings again until you ignite or the grace period ends (60 minutes after the time, +15 per "in traffic").</td></tr>
+    <tr><td>Long-press the notification</td><td>"Ignite" finishes it; "In traffic · 15 min" delays it. Neither needs unlocking or opening the app.</td></tr>
+  </table>
+  <div class="tip">With the phone's <strong>silent switch</strong> on there is no sound or vibration, only the banner — that is an iOS boundary, not an app setting.</div>
+
+  <h3>Streak</h3>
+  <p>Top right of the main screen: the number of consecutive days with at least one check-in. That is the only number — no score, no ranking.</p>
+
+  <h2>3. Co-pilot</h2>
+  <p>The co-pilot's phone shows <strong>one card</strong>:</p>
+  <div class="card">
+    <p><strong>Today 3/4 ✓</strong><br>Last check-in 2:20 PM</p>
+    <p>[ +1 cool ] [ Respect ] [ Got it ]</p>
+  </div>
+  <ul>
+    <li>The three buttons are the whole interface. They are positive signals; the pilot gets a gentle notification. There is no nag button.</li>
+    <li>When the pilot shares "Full", tapping the card opens today's list: time, name, and either the check-in time or "In traffic" / "Not due yet".</li>
+    <li>"In traffic · last check-in …" appears on the card only after two consecutive slots go unignited. A single miss disturbs nobody. The line is grey like everything else.</li>
+    <li>"In traffic" is visible when the co-pilot opens the app; there is no push notification for it yet.</li>
+  </ul>
+
+  <h2>4. Pairing and sharing tiers</h2>
+  <ol>
+    <li>Pilot: Settings → Co-pilot link → Generate code. Valid 24 hours, single use.</li>
+    <li>Co-pilot: enter a nickname and the 6 digits. The pilot then sees "〈nickname〉 is connected".</li>
+  </ol>
+  <p>How much is shared is the <strong>pilot's</strong> choice, three tiers in Settings, switchable any time:</p>
+  <table>
+    <tr><th>Tier</th><th>The co-pilot sees</th></tr>
+    <tr><td>Full</td><td>The card, and can open today's list.</td></tr>
+    <tr><td>Summary only</td><td>The card only (including "In traffic"); no list.</td></tr>
+    <tr><td>Silent</td><td>Only "Silent". No numbers, no "In traffic".</td></tr>
+  </table>
+  <p>The tiers are enforced by server rules, not hidden by the app. Either side can unpair at any time.</p>
+
+  <h2>5. One account, both sides</h2>
+  <p>You can be your own pilot and someone else's co-pilot at the same time — a partner, a friend, a buddy you keep honest.</p>
+  <ul>
+    <li>Pilot screen: Settings → the "Watch" card → "Switch to watch view".</li>
+    <li>Co-pilot screen: "Switch to my cockpit" at the bottom.</li>
+    <li>Switching only changes the screen; your items, pairing and reminders are untouched.</li>
+    <li>An account cannot pair with itself — the co-pilot is always another person on another phone.</li>
+  </ul>
+
+  <h2>6. FAQ</h2>
+  <div class="card">
+    <h3>No reminders arriving?</h3>
+    <p>Settings → Notifications → Nightbus must be on, with "Time Sensitive" enabled. The app's Settings page has a "Notification diagnostics" card showing how many reminders are scheduled and when the next one fires.</p>
+    <h3>What does the co-pilot see if my phone is off or the app was force-quit?</h3>
+    <p>A server check runs every 15 minutes; a slot past its grace period without a check-in is marked, and that row shows "In traffic" on the co-pilot's list. Your phone does not need to be online.</p>
+    <h3>What if I reinstall?</h3>
+    <p>Reinstalling on the same phone usually restores the same anonymous account. Before changing phones, use "Keep your records" with your Apple ID in Settings; signing in on the new phone restores items, streak and pairing.</p>
+    <h3>Is my data safe?</h3>
+    <p>No sign-up, anonymous account; only what you choose to share syncs, and only after pairing; no ads, no tracking, no data sale, no health data. See the <a href="./">privacy policy</a>.</p>
+  </div>
+
+  <p class="foot">
+    Questions or suggestions: <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a><br>
+    Nightbus is a daily reminder and companion tool, not a medical tool; it gives no dosage or medical advice.
+  </p>
+  </section>
+
+  <!-- ================= 简体中文 ================= -->
+  <section class="lang zh-Hans">
+  <h1>使用说明</h1>
+  <div class="sub">夜航 · 到点提醒，有人在旁 — 1.1 版草稿（2026 年 9 月）</div>
+
+  <div class="toc">
+    <strong>目录</strong><br>
+    <a href="#start">1. 快速开始</a> ·
+    <a href="#pilot">2. 驾驶员</a> ·
+    <a href="#copilot">3. 副驾</a> ·
+    <a href="#share">4. 配对与分享层级</a> ·
+    <a href="#roles">5. 一个账号、两边都能当</a> ·
+    <a href="#faq">6. 常见问题</a>
+  </div>
+
+  <h2>1. 快速开始</h2>
+  <p>Nightbus 是给任何有 ADHD 特质的人——青少年或成人——的日常提醒。它有两边，通常在<strong>两台手机</strong>上：</p>
+  <div class="card"><ul>
+    <li><strong>驾驶员</strong>——记录自己日常事项的人。到点收到提醒，点一下完成。</li>
+    <li><strong>副驾</strong>——你选择让他看一张卡的人：家人、伴侣或伙伴。只看到你分享的部分，能送你三种正向信号。</li>
+  </ul></div>
+  <ol>
+    <li>打开 App——<strong>免注册</strong>，直接开始。</li>
+    <li>在“你在哪一边？”选一边。这只是“先看哪个画面”，之后随时可切。</li>
+    <li>驾驶员：输入你的代号（例如 Casper）就出发。副驾：输入驾驶员给你的 6 位配对码。</li>
+    <li>驾驶员请在提示出现时<strong>开启通知</strong>——到点提醒全靠它。</li>
+  </ol>
+  <div class="tip">还没有人配对？副驾的配对码页有“示范模式”，单机就能看到那张卡长什么样。</div>
+
+  <h2>2. 驾驶员</h2>
+
+  <h3>主画面：今天的时间线</h3>
+  <p>今天的事项按时间排成一列。到点那一格会<strong>亮起来</strong>，其他全部安静；已完成的沉到底部变暗。顶部七格是接下来七天，只能往后看一周。</p>
+  <ul>
+    <li><strong>点一下</strong>那一列 = 点火（完成）。</li>
+    <li><strong>长按</strong> = 堵车中，延后 15 分钟，最多两次。</li>
+    <li>错过的班次只是灰的，写“下一班 下午 8:00”。不会变红，也不会数你错过几次。</li>
+  </ul>
+
+  <h3>新增事项：三个栏目</h3>
+  <p>右下角“＋”。名称 → <kbd>燃料</kbd> 或 <kbd>任务</kbd> → <kbd>每天</kbd>／<kbd>每周</kbd>／<kbd>只这一次</kbd>。就这样。</p>
+  <ul>
+    <li><strong>燃料</strong> = 药物、保健品。<strong>任务</strong> = 其他要做的事。两者只差图标，其他完全一样。</li>
+    <li>“每天”默认一个时间（第一次是 08:00，之后记住你上次设的），“＋”再加一个时间。</li>
+    <li>“只这一次”可以不设时间：那是全天事项，整天都能完成，只在 09:00 提醒一次，永远不会“堵车”。</li>
+  </ul>
+
+  <h3>提醒：到点就响，锁屏上就能完成</h3>
+  <table>
+    <tr><th>时机</th><th>会发生什么</th></tr>
+    <tr><td>到点</td><td>通知响（自定铃声，约 25 秒）。内容只有事项名称和时间。</td></tr>
+    <tr><td>+5 分、之后每 10 分</td><td>还没点火就同一条再响，直到点火或宽限结束（到点后 60 分钟，每次堵车加 15）。</td></tr>
+    <tr><td>长按通知</td><td>“点火”直接完成；“堵车中 · 延后 15 分钟”。都不用解锁或打开 App。</td></tr>
+  </table>
+  <div class="tip">手机在<strong>静音开关</strong>下不会响也不会震，只有横幅——这是 iOS 的界线，不是 App 的设置。</div>
+
+  <h3>连续记录</h3>
+  <p>主画面右上角是连续有完成的天数。只有这一个数字；没有分数、没有排名。</p>
+
+  <h2>3. 副驾</h2>
+  <p>副驾的手机上只有<strong>一张卡</strong>：</p>
+  <div class="card">
+    <p><strong>今天 3／4 ✓</strong><br>最后一次 下午 2:20</p>
+    <p>［ +1 酷 ］［ 尊敬 ］［ 收到 ］</p>
+  </div>
+  <ul>
+    <li>三个按钮是全部的操作。它们是正向信号，驾驶员会在自己的手机上收到一条轻轻的通知。没有“催”的按钮。</li>
+    <li>驾驶员设为“全部”时，点卡可以展开今天的清单：每行显示时间、名称、已完成的时间或“堵车中”／“未到站”。</li>
+    <li>连续两次没有点火，卡才会写“堵车中 · 最后一次 …”。单次不惊动任何人。这一行也是灰的。</li>
+    <li>堵车中只在副驾打开 App 时看得到；目前不会推送通知。</li>
+  </ul>
+
+  <h2>4. 配对与分享层级</h2>
+  <ol>
+    <li>驾驶员：设置 → 副驾连接 → 生成 6 位配对码。24 小时内有效、只能用一次。</li>
+    <li>副驾：在自己的手机输入昵称和那 6 位码。连上后驾驶员会看到“〈昵称〉已连接”。</li>
+  </ol>
+  <p>分享多少由<strong>驾驶员</strong>决定，设置里三选一，随时可换：</p>
+  <table>
+    <tr><th>层级</th><th>副驾看到</th></tr>
+    <tr><td>全部</td><td>那张卡，并可展开今天的清单。</td></tr>
+    <tr><td>只看总览</td><td>只有那张卡（含堵车中），不能展开。</td></tr>
+    <tr><td>静音</td><td>只有“静音中”。没有数字、没有堵车中。</td></tr>
+  </table>
+  <p>这些层级由服务器规则强制，不是靠 App 画面藏起来。任一边都可以随时解除配对。</p>
+
+  <h2>5. 一个账号、两边都能当</h2>
+  <p>你可以一边当自己的驾驶员，一边当另一个人的副驾——伴侣、朋友、互相督促的伙伴。</p>
+  <ul>
+    <li>驾驶员画面：设置 → “守航”卡 → “切到守航视图”。</li>
+    <li>副驾画面：底部“切到我的驾驶舱”。</li>
+    <li>切换只是换画面；你的事项、配对和提醒都不受影响。</li>
+    <li>一个账号不能和自己配对——副驾一定是另一台手机上的另一个人。</li>
+  </ul>
+
+  <h2>6. 常见问题</h2>
+  <div class="card">
+    <h3>没有收到提醒？</h3>
+    <p>设置 → 通知 → Nightbus 要开启，且“时效性通知”为开。App 内设置页有“通知诊断”卡，能看到目前排程中的通知数与下一条时间。</p>
+    <h3>手机关机或 App 被强制结束时，副驾会看到什么？</h3>
+    <p>服务器每 15 分钟检查一次；超过宽限没有点火的班次会被标记，副驾清单上那一行会显示“堵车中”。这不需要你的手机在线。</p>
+    <h3>重装 App 会怎样？</h3>
+    <p>同一台手机重装通常会找回同一个匿名账号。换手机前，可以在设置用 Apple 账号“保留你的记录”，之后在新手机登录即可恢复事项、连续记录与配对。</p>
+    <h3>我的数据安全吗？</h3>
+    <p>免注册、匿名账号；只在配对后同步你选择分享的内容；无广告、无跟踪、不出售数据、不收集健康数据。详见<a href="./">隐私政策</a>。</p>
+  </div>
+
+  <p class="foot">
+    问题或建议：<a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a><br>
+    Nightbus 是日常提醒与陪伴工具，并非医疗工具，不提供任何剂量或医疗建议。
+  </p>
+  </section>
+</div>
+<script>
+  const pick = (l) => {
+    document.querySelectorAll('.lang').forEach((s) => s.classList.toggle('on', s.classList.contains(l)))
+    document.querySelectorAll('.tabs button').forEach((b) => b.classList.toggle('on', b.dataset.l === l))
+    document.documentElement.lang = l
+  }
+  const nav = (navigator.language || '').toLowerCase()
+  if (nav.startsWith('en')) pick('en')
+  else if (nav.includes('hans') || /^zh[-_](cn|sg|my)/.test(nav)) pick('zh-Hans')
+  document.querySelectorAll('.tabs button').forEach((b) => b.addEventListener('click', () => pick(b.dataset.l)))
+</script>
+</body>
+</html>
