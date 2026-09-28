@@ -77,7 +77,7 @@
   <h3>主畫面：今天的時間線</h3>
   <p>今天的事項按時間排成一列。到點那一格會<strong>亮起來</strong>，其他全部安靜；已完成的沉到底部變暗。頂部七格是接下來七天，只能往後看一週。</p>
   <ul>
-    <li><strong>點一下</strong>那一列 = 點火（完成）。</li>
+    <li><strong>點一下</strong>那一列 = 上車（完成）。</li>
     <li><strong>長按</strong> = 塞車中，延後 15 分鐘，最多兩次。</li>
     <li>錯過的班次只是灰的，寫「下一班 下午 8:00」。不會變紅，也不會數你錯過幾次。</li>
   </ul>
@@ -94,8 +94,8 @@
   <table>
     <tr><th>時機</th><th>會發生什麼</th></tr>
     <tr><td>到點</td><td>通知響（自訂鈴聲，約 25 秒）。內容只有事項名稱和時間。</td></tr>
-    <tr><td>+5 分、之後每 10 分</td><td>還沒點火就同一則再響，直到點火或寬限結束（到點後 60 分鐘，每次塞車加 15）。</td></tr>
-    <tr><td>長按通知</td><td>「點火」直接完成；「塞車中 · 延後 15 分鐘」。都不用解鎖或開 App。</td></tr>
+    <tr><td>+5 分、之後每 10 分</td><td>還沒上車就同一則再響，直到上車或寬限結束（到點後 60 分鐘，每次塞車加 15）。</td></tr>
+    <tr><td>長按通知</td><td>「上車」直接完成；「塞車中 · 延後 15 分鐘」。都不用解鎖或開 App。</td></tr>
   </table>
   <div class="tip">手機在<strong>靜音開關</strong>下不會響也不會震，只有橫幅——這是 iOS 的界線，不是 App 的設定。</div>
 
@@ -111,7 +111,7 @@
   <ul>
     <li>三個按鈕是全部的操作。它們是正向訊號，駕駛員下次打開 App 時，畫面上會浮出一句輕輕的話——是 App 內的訊息，不是通知，不會響。沒有「催」的按鈕。</li>
     <li>駕駛員設為「全部」時，點卡可以展開今天的清單：每列顯示時間、名稱、已完成的時間或「塞車中」／「未到站」。</li>
-    <li>連續兩次沒有點火，卡才會寫「塞車中 · 最後一次 …」。單次不驚動任何人。這一行也是灰的。</li>
+    <li>連續兩次沒有上車，卡才會寫「塞車中 · 最後一次 …」。單次不驚動任何人。這一行也是灰的。</li>
     <li>塞車中只在副駕打開 App 時看得到；目前不會推播通知。</li>
   </ul>
 
@@ -143,7 +143,7 @@
     <h3>沒有收到提醒？</h3>
     <p>設定 → 通知 → Nightbus 要開啟，且「時效性通知」為開。App 內設定頁有「通知診斷」卡，能看到下一則提醒的時間。</p>
     <h3>手機關機或 App 被強制結束時，副駕會看到什麼？</h3>
-    <p>伺服器每 15 分鐘檢查一次；超過寬限沒有點火的班次會被標記，副駕清單上那一列會顯示「塞車中」。這不需要你的手機在線。</p>
+    <p>伺服器每 15 分鐘檢查一次；超過寬限沒有上車的班次會被標記，副駕清單上那一列會顯示「塞車中」。這不需要你的手機在線。</p>
     <h3>重裝 App 會怎樣？</h3>
     <p>重裝可能遺失紀錄。換手機或重裝前，先在設定用 Apple 帳號「保留你的紀錄」。</p>
     <h3>我的資料安全嗎？</h3>
@@ -190,7 +190,7 @@
   <h3>Main screen: today's timeline</h3>
   <p>Today's items in one column, by time. The slot that is due <strong>lights up</strong>; everything else stays quiet; finished ones sink to the bottom, dimmed. The seven cells on top are the next seven days — you can only look a week ahead.</p>
   <ul>
-    <li><strong>Tap</strong> a row = Ignite (done).</li>
+    <li><strong>Tap</strong> a row = Board (done).</li>
     <li><strong>Long-press</strong> = In traffic — delay 15 minutes, at most twice.</li>
     <li>A missed slot is just grey and says "Next run 8:00 PM". It never turns red and nothing counts your misses.</li>
   </ul>
@@ -207,8 +207,8 @@
   <table>
     <tr><th>When</th><th>What happens</th></tr>
     <tr><td>On time</td><td>The notification rings (custom sound, about 25 s). It says only the item's name and time.</td></tr>
-    <tr><td>+5 min, then every 10</td><td>The same notification rings again until you ignite or the grace period ends (60 minutes after the time, +15 per "in traffic").</td></tr>
-    <tr><td>Long-press the notification</td><td>"Ignite" finishes it; "In traffic · 15 min" delays it. Neither needs unlocking or opening the app.</td></tr>
+    <tr><td>+5 min, then every 10</td><td>The same notification rings again until you board or the grace period ends (60 minutes after the time, +15 per "in traffic").</td></tr>
+    <tr><td>Long-press the notification</td><td>"Board" finishes it; "In traffic · 15 min" delays it. Neither needs unlocking or opening the app.</td></tr>
   </table>
   <div class="tip">With the phone's <strong>silent switch</strong> on there is no sound or vibration, only the banner — that is an iOS boundary, not an app setting.</div>
 
@@ -224,7 +224,7 @@
   <ul>
     <li>The three buttons are the whole interface. They are positive signals; the next time the pilot opens the app, a quiet line appears on screen — an in-app message, not a notification, and it does not ring. There is no nag button.</li>
     <li>When the pilot shares "Full", tapping the card opens today's list: time, name, and either the check-in time or "In traffic" / "Not due yet".</li>
-    <li>"In traffic · last check-in …" appears on the card only after two consecutive slots go unignited. A single miss disturbs nobody. The line is grey like everything else.</li>
+    <li>"In traffic · last check-in …" appears on the card only after two consecutive slots go unboarded. A single miss disturbs nobody. The line is grey like everything else.</li>
     <li>"In traffic" is visible when the co-pilot opens the app; there is no push notification for it yet.</li>
   </ul>
 
@@ -303,7 +303,7 @@
   <h3>主画面：今天的时间线</h3>
   <p>今天的事项按时间排成一列。到点那一格会<strong>亮起来</strong>，其他全部安静；已完成的沉到底部变暗。顶部七格是接下来七天，只能往后看一周。</p>
   <ul>
-    <li><strong>点一下</strong>那一列 = 点火（完成）。</li>
+    <li><strong>点一下</strong>那一列 = 上车（完成）。</li>
     <li><strong>长按</strong> = 堵车中，延后 15 分钟，最多两次。</li>
     <li>错过的班次只是灰的，写“下一班 下午 8:00”。不会变红，也不会数你错过几次。</li>
   </ul>
@@ -320,8 +320,8 @@
   <table>
     <tr><th>时机</th><th>会发生什么</th></tr>
     <tr><td>到点</td><td>通知响（自定铃声，约 25 秒）。内容只有事项名称和时间。</td></tr>
-    <tr><td>+5 分、之后每 10 分</td><td>还没点火就同一条再响，直到点火或宽限结束（到点后 60 分钟，每次堵车加 15）。</td></tr>
-    <tr><td>长按通知</td><td>“点火”直接完成；“堵车中 · 延后 15 分钟”。都不用解锁或打开 App。</td></tr>
+    <tr><td>+5 分、之后每 10 分</td><td>还没上车就同一条再响，直到上车或宽限结束（到点后 60 分钟，每次堵车加 15）。</td></tr>
+    <tr><td>长按通知</td><td>“上车”直接完成；“堵车中 · 延后 15 分钟”。都不用解锁或打开 App。</td></tr>
   </table>
   <div class="tip">手机在<strong>静音开关</strong>下不会响也不会震，只有横幅——这是 iOS 的界线，不是 App 的设置。</div>
 
@@ -337,7 +337,7 @@
   <ul>
     <li>三个按钮是全部的操作。它们是正向信号，驾驶员下次打开 App 时，画面上会浮出一句轻轻的话——是 App 内的消息，不是通知，不会响。没有“催”的按钮。</li>
     <li>驾驶员设为“全部”时，点卡可以展开今天的清单：每行显示时间、名称、已完成的时间或“堵车中”／“未到站”。</li>
-    <li>连续两次没有点火，卡才会写“堵车中 · 最后一次 …”。单次不惊动任何人。这一行也是灰的。</li>
+    <li>连续两次没有上车，卡才会写“堵车中 · 最后一次 …”。单次不惊动任何人。这一行也是灰的。</li>
     <li>堵车中只在副驾打开 App 时看得到；目前不会推送通知。</li>
   </ul>
 
@@ -369,7 +369,7 @@
     <h3>没有收到提醒？</h3>
     <p>设置 → 通知 → Nightbus 要开启，且“时效性通知”为开。App 内设置页有“通知诊断”卡，能看到下一条提醒的时间。</p>
     <h3>手机关机或 App 被强制结束时，副驾会看到什么？</h3>
-    <p>服务器每 15 分钟检查一次；超过宽限没有点火的班次会被标记，副驾清单上那一行会显示“堵车中”。这不需要你的手机在线。</p>
+    <p>服务器每 15 分钟检查一次；超过宽限没有上车的班次会被标记，副驾清单上那一行会显示“堵车中”。这不需要你的手机在线。</p>
     <h3>重装 App 会怎样？</h3>
     <p>重装可能丢失记录。换手机或重装前，先在设置用 Apple 账号“保留你的记录”。</p>
     <h3>我的数据安全吗？</h3>
