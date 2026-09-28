@@ -41,7 +41,7 @@
     <h2>我們收集什麼</h2>
     <div class="card"><ul>
       <li><strong>匿名帳號識別碼</strong> — 由 Firebase 匿名登入產生的隨機 ID。無需註冊，我們不收集你的姓名、電郵或電話。</li>
-      <li><strong>你自行輸入的內容</strong> — 提醒名稱與時間、完成紀錄、暱稱、自訂獎勵與懸賞文字。這些內容<strong>只在你與守護者配對之後</strong>，依你選擇的分享模式同步到雲端，供對方查看。未配對時，一切只存在你的裝置上。</li>
+      <li><strong>你自行輸入的內容</strong> — 提醒名稱與時間、完成紀錄、暱稱。這些內容在你完成初次設定後，同步到雲端一條<strong>只有你本人可讀</strong>的路徑，用於重裝或換機時找回紀錄；配對後，副駕依你選擇的分享模式可讀其中一部分。</li>
       <li><strong>Apple 帳號綁定（選用）</strong> — 只用於重裝或換機時找回紀錄。我們透過 Sign in with Apple 取得一個識別碼；你可以選擇隱藏電郵。</li>
     </ul></div>
 
@@ -53,10 +53,10 @@
     </ul></div>
 
     <h2>資料存放</h2>
-    <p>配對同步的資料儲存於 Google Firebase（Firestore 與 Authentication，asia-east1 區域），傳輸全程加密。存取規則保證只有配對雙方能讀取自己配對內的資料。</p>
+    <p>同步的資料儲存於 Google Firebase（Firestore 與 Authentication，asia-east1 區域），傳輸全程加密。存取規則保證只有你本人——以及配對後的副駕，依分享模式——能讀取。一個排程伺服器函數（每 15 分鐘）為寬限已過而手機未打卡的班次補記「未上車」，並在連續兩班未上車時更新總覽的警示旗標；除此不寫任何東西。</p>
 
     <h2>分享由你控制</h2>
-    <p>駕駛員可隨時切換「詳細廣播 / 只報平安 / 靜音」三種分享模式，或解除配對——解除後守護者即無法再看到任何資料。</p>
+    <p>駕駛員可隨時切換「詳細廣播 / 只報平安 / 靜音」三種分享模式，或解除配對——解除後副駕即無法再看到任何資料。</p>
 
     <h2>刪除資料</h2>
     <p>在 App 內「設定 → 清除所有資料」可移除本機所有紀錄並登出帳號。如需刪除雲端資料，請來信 <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a>，我們會刪除你的帳號與相關文件。</p>
@@ -74,7 +74,7 @@
     <h2>What we collect</h2>
     <div class="card"><ul>
       <li><strong>An anonymous account identifier</strong> — a random ID created by Firebase anonymous sign-in. No registration; we do not collect your name, email or phone number.</li>
-      <li><strong>Content you enter</strong> — reminder names and times, completion records, nicknames, and custom reward/bounty text. This syncs to the cloud <strong>only after you pair with a guardian</strong>, under the sharing mode you choose. Unpaired, everything stays on your device.</li>
+      <li><strong>Content you enter</strong> — reminder names and times, completion records, nicknames. After onboarding this syncs to a cloud path <strong>readable only by you</strong>, so your records can be recovered after a reinstall or on a new device; once you pair, your co-pilot can read part of it under the sharing mode you choose.</li>
       <li><strong>Apple ID linking (optional)</strong> — used only to recover your records after a reinstall or on a new device, via Sign in with Apple. You may hide your email.</li>
     </ul></div>
 
@@ -86,10 +86,10 @@
     </ul></div>
 
     <h2>Where data lives</h2>
-    <p>Paired data is stored in Google Firebase (Firestore and Authentication, asia-east1 region) and encrypted in transit. Security rules ensure only the two paired accounts can read their own pair's data.</p>
+    <p>Synced data is stored in Google Firebase (Firestore and Authentication, asia-east1 region) and encrypted in transit. Security rules ensure only you — and, once paired, your co-pilot under your sharing mode — can read it. A scheduled server function (every 15 minutes) writes a "missed" check-in for any slot whose grace period has passed without a check-in from the phone, and updates the summary's alert flag when two consecutive slots are missed. It writes nothing else.</p>
 
     <h2>Sharing is yours to control</h2>
-    <p>The pilot can switch between Full broadcast / All-clear only / Silent at any time, or unpair — after which the guardian can no longer see anything.</p>
+    <p>The pilot can switch between Full broadcast / All-clear only / Silent at any time, or unpair — after which the co-pilot can no longer see anything.</p>
 
     <h2>Deleting your data</h2>
     <p>In the app, Settings → Erase all data removes everything on the device and signs the account out. To delete cloud data, email <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a> and we will delete your account and its documents.</p>
@@ -107,7 +107,7 @@
     <h2>我们收集什么</h2>
     <div class="card"><ul>
       <li><strong>匿名账号标识符</strong> — 由 Firebase 匿名登录生成的随机 ID。无需注册，我们不收集你的姓名、邮箱或电话。</li>
-      <li><strong>你自行输入的内容</strong> — 提醒名称与时间、完成记录、昵称、自定义奖励与悬赏文字。这些内容<strong>只在你与守护者配对之后</strong>，按你选择的分享模式同步到云端，供对方查看。未配对时，一切只存在你的设备上。</li>
+      <li><strong>你自行输入的内容</strong> — 提醒名称与时间、完成记录、昵称。这些内容在你完成初次设置后，同步到云端一条<strong>只有你本人可读</strong>的路径，用于重装或换机时找回记录；配对后，副驾按你选择的分享模式可读其中一部分。</li>
       <li><strong>Apple 账号绑定（可选）</strong> — 只用于重装或换机时找回记录。我们通过 Sign in with Apple 获得一个标识符；你可以选择隐藏邮箱。</li>
     </ul></div>
 
@@ -119,10 +119,10 @@
     </ul></div>
 
     <h2>数据存放</h2>
-    <p>配对同步的数据存储于 Google Firebase（Firestore 与 Authentication，asia-east1 区域），传输全程加密。访问规则保证只有配对双方能读取自己配对内的数据。</p>
+    <p>同步的数据存储于 Google Firebase（Firestore 与 Authentication，asia-east1 区域），传输全程加密。访问规则保证只有你本人——以及配对后的副驾，按分享模式——能读取。一个排程服务器函数（每 15 分钟）为宽限已过而手机未打卡的班次补记“未上车”，并在连续两班未上车时更新总览的警示旗标；除此不写任何东西。</p>
 
     <h2>分享由你控制</h2>
-    <p>驾驶员可随时切换「详细广播 / 只报平安 / 静音」三种分享模式，或解除配对——解除后守护者即无法再看到任何数据。</p>
+    <p>驾驶员可随时切换「详细广播 / 只报平安 / 静音」三种分享模式，或解除配对——解除后副驾即无法再看到任何数据。</p>
 
     <h2>删除数据</h2>
     <p>在 App 内「设置 → 清除所有数据」可移除本机所有记录并登出账号。如需删除云端数据，请来信 <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a>，我们会删除你的账号与相关文件。</p>
