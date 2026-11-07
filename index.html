@@ -35,16 +35,17 @@
   <!-- ================= 繁體中文 ================= -->
   <section class="lang zh-Hant on">
     <h1>隱私政策</h1>
-    <div class="sub">生效日期：2026 年 9 月 29 日</div>
-    <p>Nightbus（夜航）是一款提醒與家庭陪伴 App。我們的原則很簡單：<strong>只收集讓 App 運作所必需的最少資料，分享多少永遠由你決定。</strong></p>
+    <div class="sub">生效日期：2026 年 11 月 7 日</div>
+    <p>NightBus（夜航）是一款提醒與家庭陪伴 App。我們只收集讓 App 運作所必需的最少資料，分享多少由你決定。</p>
 
     <h2>我們收集什麼</h2>
     <div class="card"><ul>
-      <li><strong>匿名帳號識別碼</strong> — 由 Firebase 匿名登入產生的隨機 ID。無需註冊，我們不收集你的姓名、電郵或電話。</li>
-      <li><strong>你自行輸入的內容</strong> — 提醒名稱與時間、完成紀錄、暱稱。這些內容在你完成初次設定後，同步到雲端一條<strong>只有你本人可讀</strong>的路徑，用於重裝或換機時找回紀錄；配對後，副駕依你選擇的分享模式可讀其中一部分。</li>
-      <li><strong>Apple 帳號綁定（選用）</strong> — 只用於重裝或換機時找回紀錄。我們透過 Sign in with Apple 取得識別碼與你允許的姓名、電郵（可選『隱藏我的電郵』）。</li>
+      <li><strong>匿名帳號識別碼</strong> — 第一次打開 App 時，由 Firebase 匿名登入產生的隨機 ID。無需註冊，我們不會要求你的真實姓名、電郵或電話。</li>
+      <li><strong>你自行輸入的內容</strong> — 暱稱、提醒名稱與時間、上車紀錄，以及副駕送出的訊號。選擇「我是駕駛員」之後，這些內容會同步到雲端，用於重裝或換機時找回紀錄。配對之後，副駕能讀到多少，由你選的分享模式決定（見下方「分享由你控制」）。</li>
+      <li><strong>推播通知 token</strong> — 用來送達通知的裝置識別碼。App 啟動時，Firebase Cloud Messaging SDK 可能會向 Google 取得 token；只有在你允許通知之後，我們才會把它存到你的帳號下，你關閉通知後下一次打開 App 時移除。它只用於兩種通知：副駕送給駕駛員的訊號，以及駕駛員連續兩班未上車時給副駕的提醒。</li>
+      <li><strong>還原狀態</strong> — App 把紀錄還原到裝置時，會記下結果、錯誤原因（如有）與 App 版本，用來排除同步問題。</li>
+      <li><strong>Apple 帳號綁定（選用）</strong> — 只用於重裝或換機時找回紀錄。我們透過 Sign in with Apple 取得識別碼與你允許的姓名、電郵（可選「隱藏我的電郵」）。</li>
     </ul></div>
-    <p>匿名使用時不收集姓名、電郵；綁定 Apple 帳號時由 Apple 提供，可選隱藏電郵。</p>
 
     <h2>我們不收集什麼</h2>
     <div class="card"><ul>
@@ -54,13 +55,26 @@
     </ul></div>
 
     <h2>資料存放</h2>
-    <p>同步的資料儲存於 Google Firebase（Firestore 與 Authentication，asia-east1 區域），傳輸全程加密。存取規則保證只有你本人——以及配對後的副駕，依分享模式——能讀取。一個排程伺服器函數（每 15 分鐘）為寬限已過而手機未打卡的班次補記「未上車」，並在連續兩班未上車時更新總覽的警示旗標；除此不寫任何東西。</p>
+    <p>同步的資料儲存於 Google Firebase 位於美國的資料中心，傳輸全程加密；我們的伺服器函數在台灣（asia-east1）執行。</p>
+    <p>伺服器函數只做三件事：一個排程函數（每 15 分鐘）為寬限已過而手機未打卡的班次補記「未上車」，並在連續兩班未上車時更新總覽的警示旗標；另外兩個函數負責送出上面提到的兩種通知。除此之外不處理你的資料。</p>
 
     <h2>分享由你控制</h2>
-    <p>駕駛員可隨時切換「詳細廣播 / 只報平安 / 靜音」三種分享模式，或解除配對——解除後副駕即無法再看到任何資料。</p>
+    <p>存取規則在伺服器端強制執行，只有你本人和配對的副駕能讀取。駕駛員可隨時切換三種模式：</p>
+    <div class="card"><ul>
+      <li><strong>詳細廣播</strong> — 副駕可以看到每個班次的時間與上車紀錄。</li>
+      <li><strong>只看總覽</strong> — 副駕只看到今天的總覽與是否塞車，看不到個別班次。</li>
+      <li><strong>靜音模式</strong> — 副駕讀不到你的班次、紀錄與總覽，也不會收到塞車提醒。</li>
+    </ul></div>
+    <p>你也可以解除配對——解除後副駕即無法再看到任何資料。</p>
 
     <h2>刪除資料</h2>
-    <p>在 App 內「設定 → 清除所有資料」可移除本機所有紀錄並登出帳號。如需刪除雲端資料，請來信 <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a>，我們會刪除你的帳號與相關文件。</p>
+    <p>在 App 內「設定 → 清除所有資料」會同時刪除雲端與這台手機上的資料：你的帳號紀錄、你的配對與其下所有班次、上車紀錄、總覽與訊號、推播 token，以及匿名帳號本身。此動作無法復原；沒有網路時不會刪除任何東西。</p>
+    <div class="card"><ul>
+      <li>如果你綁定了 Apple 帳號，App 會先請你向 Apple 確認，並撤銷綁定。</li>
+      <li>如果你是副駕，清除會刪掉你自己的紀錄並與駕駛員解除連結；駕駛員的資料仍屬於駕駛員。</li>
+      <li>伺服器的運作紀錄檔可能含有你的隨機 ID，不在上述刪除範圍內，會依 Google Cloud 的保留期限自動過期。</li>
+    </ul></div>
+    <p>無法使用 App 時，可來信 <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a>，我們會代為刪除。</p>
 
     <h2>政策變更</h2>
     <p>政策如有更新，會在本頁公布並更新生效日期。</p>
@@ -69,16 +83,17 @@
   <!-- ================= English ================= -->
   <section class="lang en">
     <h1>Privacy Policy</h1>
-    <div class="sub">Effective date: September 29, 2026</div>
-    <p>Nightbus is a reminder and family-companion app. Our principle is simple: <strong>we collect the minimum needed for the app to work, and you always decide how much is shared.</strong></p>
+    <div class="sub">Effective date: November 7, 2026</div>
+    <p>NightBus is a reminder and family-companion app. We collect the minimum needed for the app to work, and you decide how much is shared.</p>
 
     <h2>What we collect</h2>
     <div class="card"><ul>
-      <li><strong>An anonymous account identifier</strong> — a random ID created by Firebase anonymous sign-in. No registration; we do not collect your name, email or phone number.</li>
-      <li><strong>Content you enter</strong> — reminder names and times, completion records, nicknames. After onboarding this syncs to a cloud path <strong>readable only by you</strong>, so your records can be recovered after a reinstall or on a new device; once you pair, your co-pilot can read part of it under the sharing mode you choose.</li>
+      <li><strong>An anonymous account identifier</strong> — a random ID created by Firebase anonymous sign-in the first time you open the app. No registration; we never ask for your real name, email or phone number.</li>
+      <li><strong>Content you enter</strong> — your nickname, reminder names and times, check-in records, and the signals a co-pilot sends. Once you choose "I'm the pilot", this syncs to the cloud so your records can be recovered after a reinstall or on a new device. After you pair, how much your co-pilot can read depends on the sharing mode you choose (see "Sharing is yours to control").</li>
+      <li><strong>A push notification token</strong> — a device identifier used to deliver notifications. The Firebase Cloud Messaging SDK may obtain a token from Google when the app starts; we store it with your account only after you allow notifications, and remove it the next time the app opens after you turn them off. It is used for two notifications only: a co-pilot's signal to the pilot, and a heads-up to the co-pilot when the pilot has gone two runs in a row without checking in.</li>
+      <li><strong>Restore status</strong> — when the app restores your records onto a device, it saves the outcome, an error reason if there was one, and the app version, so sync problems can be fixed.</li>
       <li><strong>Apple ID linking (optional)</strong> — used only to recover your records after a reinstall or on a new device. Through Sign in with Apple we receive an identifier and the name and email you allow (you may choose "Hide My Email").</li>
     </ul></div>
-    <p>Used anonymously, we collect no name or email; if you link your Apple account, Apple provides them and you can hide your email.</p>
 
     <h2>What we do not collect</h2>
     <div class="card"><ul>
@@ -88,13 +103,26 @@
     </ul></div>
 
     <h2>Where data lives</h2>
-    <p>Synced data is stored in Google Firebase (Firestore and Authentication, asia-east1 region) and encrypted in transit. Security rules ensure only you — and, once paired, your co-pilot under your sharing mode — can read it. A scheduled server function (every 15 minutes) writes a "missed" check-in for any slot whose grace period has passed without a check-in from the phone, and updates the summary's alert flag when two consecutive slots are missed. It writes nothing else.</p>
+    <p>Synced data is stored in Google Firebase data centers in the United States and is encrypted in transit; our server functions run in Taiwan (asia-east1).</p>
+    <p>Our server functions do three things: a scheduled function (every 15 minutes) records when a run's grace period has passed without a check-in from the phone and updates the summary's alert flag after two such runs in a row; and two functions send the notifications described above. They do nothing else with your data.</p>
 
     <h2>Sharing is yours to control</h2>
-    <p>The pilot can switch between Full broadcast / All-clear only / Silent at any time, or unpair — after which the co-pilot can no longer see anything.</p>
+    <p>Access rules are enforced on the server: only you and your paired co-pilot can read your data. The pilot can switch between three modes at any time:</p>
+    <div class="card"><ul>
+      <li><strong>Full broadcast</strong> — your co-pilot sees each run and its boarding record.</li>
+      <li><strong>Overview only</strong> — your co-pilot sees today's overview and traffic status, not individual runs.</li>
+      <li><strong>Silent mode</strong> — your co-pilot cannot read your runs, records or overview, and receives no in-traffic notification.</li>
+    </ul></div>
+    <p>You can also unpair — after which the co-pilot can no longer see anything.</p>
 
     <h2>Deleting your data</h2>
-    <p>In the app, Settings → Erase all data removes everything on the device and signs the account out. To delete cloud data, email <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a> and we will delete your account and its documents.</p>
+    <p>In the app, Settings → Erase all data deletes your data both in the cloud and on this phone: your account record, your pair and every run, check-in, summary and signal under it, your push token, and the anonymous account itself. This cannot be undone; without an internet connection nothing is erased.</p>
+    <div class="card"><ul>
+      <li>If you linked an Apple ID, the app asks you to confirm with Apple first and revokes the link.</li>
+      <li>If you are a co-pilot, erasing removes your own record and detaches you from the pilot; the pilot's data remains theirs.</li>
+      <li>Server operation logs may contain your random ID. They are not covered by this deletion and expire under Google Cloud's log retention.</li>
+    </ul></div>
+    <p>If you cannot use the app, email <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a> and we will delete your data for you.</p>
 
     <h2>Changes</h2>
     <p>Updates to this policy will be posted on this page with a new effective date.</p>
@@ -103,32 +131,46 @@
   <!-- ================= 简体中文 ================= -->
   <section class="lang zh-Hans">
     <h1>隐私政策</h1>
-    <div class="sub">生效日期：2026 年 9 月 29 日</div>
-    <p>Nightbus（夜航）是一款提醒与家庭陪伴 App。我们的原则很简单：<strong>只收集让 App 运作所必需的最少数据，分享多少永远由你决定。</strong></p>
+    <div class="sub">生效日期：2026 年 11 月 7 日</div>
+    <p>NightBus（夜航）是一款提醒与家庭陪伴 App。我们只收集让 App 运作所必需的最少数据，分享多少由你决定。</p>
 
     <h2>我们收集什么</h2>
     <div class="card"><ul>
-      <li><strong>匿名账号标识符</strong> — 由 Firebase 匿名登录生成的随机 ID。无需注册，我们不收集你的姓名、邮箱或电话。</li>
-      <li><strong>你自行输入的内容</strong> — 提醒名称与时间、完成记录、昵称。这些内容在你完成初次设置后，同步到云端一条<strong>只有你本人可读</strong>的路径，用于重装或换机时找回记录；配对后，副驾按你选择的分享模式可读其中一部分。</li>
+      <li><strong>匿名账号标识符</strong> — 第一次打开 App 时，由 Firebase 匿名登录生成的随机 ID。无需注册，我们不会要求你的真实姓名、邮箱或电话。</li>
+      <li><strong>你自行输入的内容</strong> — 昵称、提醒名称与时间、上车记录，以及副驾送出的信号。选择「我是驾驶员」之后，这些内容会同步到云端，用于重装或换机时找回记录。配对之后，副驾能读到多少，由你选的分享模式决定（见下方「分享由你控制」）。</li>
+      <li><strong>推送通知 token</strong> — 用来送达通知的设备标识符。App 启动时，Firebase Cloud Messaging SDK 可能会向 Google 获取 token；只有在你允许通知之后，我们才会把它存到你的账号下，你关闭通知后下一次打开 App 时移除。它只用于两种通知：副驾送给驾驶员的信号，以及驾驶员连续两班未上车时给副驾的提醒。</li>
+      <li><strong>恢复状态</strong> — App 把记录恢复到设备时，会记下结果、错误原因（如有）与 App 版本，用来排查同步问题。</li>
       <li><strong>Apple 账号绑定（可选）</strong> — 只用于重装或换机时找回记录。我们通过 Sign in with Apple 获得标识符与你允许的姓名、邮箱（可选「隐藏邮件地址」）。</li>
     </ul></div>
-    <p>匿名使用时不收集姓名、邮箱；绑定 Apple 账号时由 Apple 提供，可选隐藏邮箱。</p>
 
     <h2>我们不收集什么</h2>
     <div class="card"><ul>
       <li>不收集用药剂量、诊断或任何医疗信息——提醒名称由你自由命名，App 没有任何医疗字段。</li>
-      <li>不收集位置、联系人、照片。</li>
-      <li>没有广告、没有跟踪、没有第三方分析，绝不出售数据。</li>
+      <li>不收集位置、通讯录、照片。</li>
+      <li>没有广告、没有追踪、没有第三方分析，绝不出售数据。</li>
     </ul></div>
 
     <h2>数据存放</h2>
-    <p>同步的数据存储于 Google Firebase（Firestore 与 Authentication，asia-east1 区域），传输全程加密。访问规则保证只有你本人——以及配对后的副驾，按分享模式——能读取。一个排程服务器函数（每 15 分钟）为宽限已过而手机未打卡的班次补记“未上车”，并在连续两班未上车时更新总览的警示旗标；除此不写任何东西。</p>
+    <p>同步的数据存储于 Google Firebase 位于美国的数据中心，传输全程加密；我们的服务器函数在台湾（asia-east1）运行。</p>
+    <p>服务器函数只做三件事：一个定时函数（每 15 分钟）为宽限已过而手机未打卡的班次补记「未上车」，并在连续两班未上车时更新总览的警示标记；另外两个函数负责发送上面提到的两种通知。除此之外不处理你的数据。</p>
 
     <h2>分享由你控制</h2>
-    <p>驾驶员可随时切换「详细广播 / 只报平安 / 静音」三种分享模式，或解除配对——解除后副驾即无法再看到任何数据。</p>
+    <p>访问规则在服务器端强制执行，只有你本人和配对的副驾能读取。驾驶员可随时切换三种模式：</p>
+    <div class="card"><ul>
+      <li><strong>详细广播</strong> — 副驾可以看到每个班次的时间与上车记录。</li>
+      <li><strong>只看总览</strong> — 副驾只看到今天的总览与是否塞车，看不到单个班次。</li>
+      <li><strong>静音模式</strong> — 副驾读不到你的班次、记录与总览，也不会收到塞车提醒。</li>
+    </ul></div>
+    <p>你也可以解除配对——解除后副驾即无法再看到任何数据。</p>
 
     <h2>删除数据</h2>
-    <p>在 App 内「设置 → 清除所有数据」可移除本机所有记录并登出账号。如需删除云端数据，请来信 <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a>，我们会删除你的账号与相关文件。</p>
+    <p>在 App 内「设置 → 清除所有数据」会同时删除云端与这台手机上的数据：你的账号记录、你的配对及其下所有班次、上车记录、总览与信号、推送 token，以及匿名账号本身。此操作无法撤销；没有网络时不会删除任何东西。</p>
+    <div class="card"><ul>
+      <li>如果你绑定了 Apple 账号，App 会先请你向 Apple 确认，并撤销绑定。</li>
+      <li>如果你是副驾，清除会删掉你自己的记录并与驾驶员解除关联；驾驶员的数据仍属于驾驶员。</li>
+      <li>服务器的运行日志可能含有你的随机 ID，不在上述删除范围内，会按 Google Cloud 的保留期限自动过期。</li>
+    </ul></div>
+    <p>无法使用 App 时，可来信 <a href="mailto:linkedheart.app@gmail.com">linkedheart.app@gmail.com</a>，我们会代为删除。</p>
 
     <h2>政策变更</h2>
     <p>政策如有更新，会在本页公布并更新生效日期。</p>
